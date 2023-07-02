@@ -37,16 +37,18 @@ const Header = ()=>{
                             Object.keys(navMap).map((key,i)=>{
                                 const _obj =navMap[key] 
                                 return (
-                                    <li key={i} className='flex flex-col items-center gap-1 cursor-pointer'>
+                                    <li key={i}>
                                         <Link href={_obj.url}>
-                                            <div className={`
-                                                flex justify-center items-center
-                                                border-[6px] w-[50px] h-[50px] rounded-full
-                                                ${_obj.bg_col} ${_obj.border_col}`}
-                                                >
-                                                {_obj.logo}
+                                            <div className='flex flex-col items-center gap-1 cursor-pointer'>
+                                                <div className={`
+                                                    flex justify-center items-center
+                                                    border-[6px] w-[50px] h-[50px] rounded-full
+                                                    ${_obj.bg_col} ${_obj.border_col}`}
+                                                    >
+                                                    {_obj.logo}
+                                                </div>
+                                                <span className='uppercase text-xs'>{key}</span>
                                             </div>
-                                            <span className='uppercase text-xs'>{key}</span>
                                         </Link>
                                     </li>
                                 )
